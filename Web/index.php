@@ -21,12 +21,12 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="viewport" content="width=device-width, initial-scale=0.56, maximum-scale=0.56, user-scalable=no">
         <link rel="icon" type="image/png" href="img/common/favicon.png">
-        <meta property="og:title" content="BrowserQuest">
+        <meta property="og:title" content="WaxQuest">
         <meta property="og:type" content="website">
         <meta property="og:url" content="http://browserquest.mozilla.org/">
         <meta property="og:image" content="http://browserquest.mozilla.org/img/common/promo-title.jpg">
-        <meta property="og:site_name" content="BrowserQuest">
-        <meta property="og:description" content="Play Mozilla's BrowserQuest, an HTML5 massively multiplayer game demo powered by WebSockets!">
+        <meta property="og:site_name" content="WaxQuest">
+        <meta property="og:description" content="Play Mozilla's WaxQuest, an HTML5 massively multiplayer game demo powered by WebSockets!">
         <link rel="stylesheet" href="css/main.css" type="text/css">
         <link rel="stylesheet" href="css/achievements.css" type="text/css">
         <script src="js/lib/modernizr.js" type="text/javascript"></script>
@@ -38,7 +38,7 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
                 </script>
         <![endif]-->
         <script src="js/detect.js" type="text/javascript"></script>
-        <title>BrowserQuest</title>
+        <title>WaxQuest</title>
 	</head>
     <!--[if lt IE 9]>
 	<body class="intro upscaled">
@@ -46,10 +46,10 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
 	<body class="intro">
 	    <noscript>
 	       <div class="alert">
-	           You need to enable JavaScript to play BrowserQuest.
+	           You need to enable JavaScript to play WaxQuest.
 	       </div>
 	    </noscript>
-	    <a id="moztab" class="clickable" target="_blank" href="http://www.mozilla.org/"></a>
+	    
 	    <div id="intro">
 	        <h1 id="logo">
 	           <span id="logosparks">
@@ -125,8 +125,10 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
     	            <article id="credits">
         	            <h1>
          	               <span class="left-ornament"></span>
+                           
          	               <span class="title">
-         	                   Made for Mozilla by <a target="_blank" class="stroke clickable" href="http://www.littleworkshop.fr/">Little Workshop</a>
+                            <br>
+         	                   Made by Mozilla in 2012 and Waxed by <a target="_blank" class="stroke clickable" href="https://remixworlds.com/">RemixWorlds</a> in 2022
          	               </span>
          	               <span class="right-ornament"></span>
                         </h1>
@@ -141,12 +143,22 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
                                 Code by
                                 <a class="stroke clickable" target="_blank" href="http://twitter.com/whatthefranck">Franck Lecollinet</a>
                             </div>
+                            <div id="guillaume">
+                                <div class="avatar"></div>
+                                Waxed by
+                                <a class="stroke clickable" target="_blank" href="http://waxio.io">Jordan Bourbonnais</a>
+                            </div>
+                            <div id="franck">
+                                <div class="avatar"></div>
+                                REWaxed by
+                                <a class="stroke clickable" target="_blank" href="http://waxio.io">Jordan Bourbonnais</a>
+                            </div>
                         </div>
                         <div id="seb">
-                            
-                            <span id="note"></span>
-                            Music by <a class="clickable" target="_blank" href="http://soundcloud.com/gyrowolf/sets/gyrowolfs-rpg-maker-music-pack/">Gyrowolf</a>, <a class="clickable" target="_blank" href="http://blog.dayjo.org/?p=335">Dayjo</a>, <a class="clickable" target="_blank" href="http://soundcloud.com/freakified/what-dangers-await-campus-map">Freakified</a>, &amp; <a target="_blank" class="clickable" href="http://www.newgrounds.com/audio/listen/349734">Camoshark</a>
-                           
+                        RemixWorlds: <a class="clickable" target="_blank" href="http://remixworlds.com">Website</a>, 
+                        <a class="clickable" target="_blank" href="http://twitter.com/remixworlds">Twitter</a>, 
+                        <a class="clickable" target="_blank" href="http://t.me/remixworlds">Telegram</a>, 
+                        <a class="clickable" target="_blank" href="http://waxaffiliation.io">Affiliate Program</a>
                         </div>
 	                    <div id="close-credits">
 	                        <span>- click anywhere to close -</span>
@@ -156,12 +168,12 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
         	            <h1>
          	               <span class="left-ornament"></span>
          	               <span class="title">
-         	                   What is BrowserQuest?
+         	                   What is WaxQuest?
          	               </span>
          	               <span class="right-ornament"></span>
                         </h1>
                         <p id="game-desc">
-                            BrowserQuest is a multiplayer game inviting you to explore a
+                        WaxQuest is a multiplayer game inviting you to explore a
                             world of adventure from your Web browser.
                         </p>
                         <div class="left">
@@ -299,8 +311,12 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
 		<footer>
 		    <div id="sharing" class="clickable">
 		      Share this on 
-              <a href="http://twitter.com/share?url=http%3A%2F%2Fbrowserquest.mozilla.org&amp;text=Mozilla%27s%20BrowserQuest%3A%20HTML5%20massively%20multiplayer%20adventure%20game%20%23demo%20%23websockets&amp;related=glecollinet:Creators%20of%20BrowserQuest%2Cwhatthefranck" class="twitter"></a>
+              <!--  
+                <a href="http://twitter.com/share?url=http%3A%2F%2Fbrowserquest.mozilla.org&amp;text=Mozilla%27s%20BrowserQuest%3A%20HTML5%20massively%20multiplayer%20adventure%20game%20%23demo%20%23websockets&amp;related=glecollinet:Creators%20of%20BrowserQuest%2Cwhatthefranck" class="twitter"></a>
               <a href="http://www.facebook.com/share.php?u=http://browserquest.mozilla.org/" class="facebook"></a>
+              -->
+              <a href="http://twitter.com/share?url=http%3A%2F%2Fwaxquest.com&amp;text=RemixWorlds%20launch%20WaxQuest%20-%20Open%20World%20multiplayer%20adventure%20game%20based%20on%20WAX%20blockchain%20%23WAX%20%23WAXP" class="twitter"></a>
+              <a href="http://www.facebook.com/share.php?u=http://waxquest.com/" class="facebook"></a>
 		    </div>
 		    <div id="credits-link" class="clickable">
 		      – <span id="toggle-credits">Credits</span>

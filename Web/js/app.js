@@ -316,7 +316,7 @@ define(['jquery', 'storage'], function($, Storage) {
                 if(!achievement.hidden) {
                     self.setAchievementData($a, achievement.name, achievement.desc);
                 }
-                $a.find('.twitter').attr('href', 'http://twitter.com/share?url=http%3A%2F%2Fbrowserquest.mozilla.org&text=I%20unlocked%20the%20%27'+ achievement.name +'%27%20achievement%20on%20Mozilla%27s%20%23BrowserQuest%21&related=glecollinet:Creators%20of%20BrowserQuest%2Cwhatthefranck');
+                $a.find('.twitter').attr('href', 'http://twitter.com/share?url=http%3A%2F%2Fwaxquest.com.ngrok.io&text=I%20unlocked%20the%20%27'+ achievement.name +'%27%20achievement%20on%20RemixWorlds%27s%20%23WaxQuest%21&related=20RemixWorlds:Creators%20of%20WaxQuest%2Cwaxp');
                 $a.show();
                 $a.find('a').click(function() {
                      var url = $(this).attr('href');

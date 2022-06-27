@@ -17,3 +17,38 @@
 2022-06-26 22:18:17 pid:3120217 Warning: change gid or uid fail.
 2022-06-26 22:50:43 pid:3120214 Workerman[start.php] stopping ...
 2022-06-26 22:50:43 pid:3120214 Workerman[start.php] has been stopped
+2022-06-26 22:54:26 pid:3126957 Workerman[start.php] start in DEBUG mode
+2022-06-26 22:55:11 pid:3127055 Workerman[start.php] stop 
+2022-06-26 22:55:11 pid:3127055 Workerman[start.php] not run
+2022-06-26 22:55:19 pid:3127091 Workerman[start.php] start in DEBUG mode
+2022-06-26 22:55:24 pid:3127122 Workerman[start.php] start in DAEMON mode
+2022-06-26 22:55:46 pid:3127335 Workerman[start.php] start in DEBUG mode
+2022-06-26 22:55:55 pid:3127368 Workerman[start.php] stop 
+2022-06-26 22:55:55 pid:3127368 Workerman[start.php] not run
+2022-06-26 22:55:57 pid:3127379 Workerman[start.php] start in DEBUG mode
+2022-06-26 22:56:01 pid:3127392 Workerman[start.php] stop 
+2022-06-26 22:56:01 pid:3127392 Workerman[start.php] not run
+2022-06-26 22:56:23 pid:3127443 Workerman[start.php] start in DEBUG mode
+2022-06-26 22:56:29 pid:3127605 Workerman[start.php] stop 
+2022-06-26 22:56:29 pid:3127605 Workerman[start.php] not run
+2022-06-26 22:56:31 pid:3127606 Workerman[start.php] start in DEBUG mode
+2022-06-26 22:57:16 pid:3127737 Workerman[start.php] stop 
+2022-06-26 22:57:16 pid:3127737 Workerman[start.php] not run
+2022-06-26 22:57:23 pid:3127795 Workerman[start.php] stop 
+2022-06-26 22:57:23 pid:3127795 Workerman[start.php] not run
+2022-06-26 22:57:27 pid:3127817 Workerman[start.php] start in DEBUG mode
+2022-06-26 22:58:21 pid:3127817 Workerman[start.php] stopping ...
+2022-06-26 22:58:21 pid:3127817 Workerman[start.php] has been stopped
+2022-06-26 22:58:23 pid:3128084 Workerman[start.php] start in DEBUG mode
+2022-06-26 22:58:27 pid:3128084 Workerman[start.php] stopping ...
+2022-06-26 22:58:27 pid:3128084 Workerman[start.php] has been stopped
+2022-06-26 22:58:29 pid:3128290 Workerman[start.php] stop 
+2022-06-26 22:58:29 pid:3128290 Workerman[start.php] not run
+2022-06-26 22:59:22 pid:3128361 Workerman[start.php] start in DEBUG mode
+2022-06-26 23:06:18 pid:3128361 Workerman[start.php] stopping ...
+2022-06-26 23:06:18 pid:3128361 Workerman[start.php] has been stopped
+2022-06-26 23:06:18 pid:3129842 Workerman[start.php] start in DEBUG mode
+2022-06-26 23:06:21 pid:3129863 Workerman[start.php] stop 
+2022-06-26 23:06:21 pid:3129863 Workerman[start.php] not run
+2022-06-26 23:06:22 pid:3129864 Workerman[start.php] start in DEBUG mode
+2022-06-26 23:07:03 pid:3130111 Workerman[start.php] start in DEBUG mode

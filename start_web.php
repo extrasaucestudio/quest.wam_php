@@ -18,11 +18,11 @@ use Workerman\Connection\TcpConnection;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-$web = new Worker("https://waxquest.com:8787");
+$web = new Worker("http://0.0.0.0:8787");
 
 $web->count = 2;
 
-$web->name = 'BrowserQuestWeb';
+$web->name = 'WaxQuest';
 
 define('WEBROOT',  __DIR__ . DIRECTORY_SEPARATOR . 'Web');
 
