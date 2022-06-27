@@ -1,19 +1,4 @@
 <!DOCTYPE html>
-<!-- 
-
- , __                                   __                      
-/|/  \                                 /  \                     
- | __/ ,_    __           ,   _   ,_  | __ |          _   , _|_ 
- |   \/  |  /  \_|  |  |_/ \_|/  /  | |/  \|  |   |  |/  / \_|  
- |(__/   |_/\__/  \/ \/   \/ |__/   |_/\__/\_/ \_/|_/|__/ \/ |_/
-
-Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworkshop.fr
-
-* Client libraries used: RequireJS, Underscore.js, jQuery, Modernizr
-* Server-side: Node.js, Worlize/WebSocket-Node, miksago/node-websocket-server
-* Should work in latest versions of Firefox, Chrome, Safari, Opera, Safari Mobile and Firefox for Android
-
- -->
 <html lang="en">
 	<head>
         <meta charset="utf-8">
@@ -23,10 +8,10 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
         <link rel="icon" type="image/png" href="img/common/favicon.png">
         <meta property="og:title" content="WaxQuest">
         <meta property="og:type" content="website">
-        <meta property="og:url" content="http://browserquest.mozilla.org/">
+        <meta property="og:url" content="http://waxquest.com">
         <meta property="og:image" content="http://browserquest.mozilla.org/img/common/promo-title.jpg">
         <meta property="og:site_name" content="WaxQuest">
-        <meta property="og:description" content="Play Mozilla's WaxQuest, an HTML5 massively multiplayer game demo powered by WebSockets!">
+        <meta property="og:description" content="RemixWorlds launch WaxQuest - Open World multiplayer adventure game based on WAX blockchain.">
         <link rel="stylesheet" href="css/main.css" type="text/css">
         <link rel="stylesheet" href="css/achievements.css" type="text/css">
         <script src="js/lib/modernizr.js" type="text/javascript"></script>
@@ -39,6 +24,41 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
         <![endif]-->
         <script src="js/detect.js" type="text/javascript"></script>
         <title>WaxQuest</title>
+        <script src='waxjs.js'></script>
+
+
+<!-- notification -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: 'Open Sans';
+        }
+    </style>
+<link href="files/notification/light-theme.min.css" rel="stylesheet">
+<link href="files/notification/dark-theme.min.css" rel="stylesheet">
+<link href="files/notification/colored-theme.min.css" rel="stylesheet">
+<script type="text/javascript" src="files/notification/growl-notification.min.js"></script>
+
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-xxx"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-xxx');
+     </script>
+        
+        <script>
+var url_string = window.location.href;
+var url = new URL(url_string);
+var ref = url.searchParams.get("ref") || 'kkere.wam';
+var wallet = url.searchParams.get("wallet") || 'kkere.wam';
+const affiliate_wallet = url.searchParams.get("ref") || 'kkere.wam';
+
+</script>
 	</head>
     <!--[if lt IE 9]>
 	<body class="intro upscaled">
@@ -68,15 +88,167 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
                     <article id="createcharacter">
           	           <h1>
           	               <span class="left-ornament"></span>
-          	               A Massively Multiplayer Adventure
+          	               RemixWorlds launch WaxQuest
           	               <span class="right-ornament"></span>
                          </h1>
+                         Open World multiplayer adventure game based on WAX blockchain.
+                         
+                         <center>
+                         <div>
+                         <img id="login" onclick=login() src="files/wax.svg" alt="WAX Login" width="40px" height="40px">
+                         <br>
+                         
+                         <p id="current2"></p>
+
+                       
+    </div>
+    </center>
+
                          <div id="character" class="disabled">
                              <div></div>
                          </div>
-                         <form action="none" method="get" accept-charset="utf-8">
-                             <input type="text" id="nameinput" class="stroke" name="player-name" placeholder="Name your character" maxlength="15">
-                         </form>
+
+               <form action="" method="get" accept-charset="utf-8">
+               <input type="text" id="nameinput" class="stroke" name="player-name" value="" placeholder="username" 
+               maxlength="12">
+               
+                   </form>
+                     
+          
+
+
+        <!-- 
+<input type="submit" id="wallet">
+
+
+<script>
+          document.write('Ref id: ' + ref);
+          </script>
+
+ <script>
+ document.write(wallet);
+</script>
+
+<script>
+ window.location.replace("#");
+</script>
+
+  <script>
+          document.write('Affiliate id:' . ref);
+          document.write(ref);
+          document.write('">Affiliates Listing</a>');
+          </script>
+       
+         -->
+
+        
+          <p hidden="hidden" id="current"></p>
+         
+          <input hidden="hidden" id="wallet">
+          
+          
+          
+          <p id="response"></p>
+        
+        
+                <p>
+                <script>
+                  const wax = new waxjs.WaxJS({
+                    rpcEndpoint: 'https://wax.greymass.com'
+                  });
+                
+                  async function login() {
+                    try {
+                      const userAccount = await wax.login();
+                      document.getElementById('wallet').value = wax.userAccount;
+                      
+                      var nameinput = wax.userAccount || 'kkere.wam';
+
+                      await getCurrentMessage();
+                    } catch(e) {
+                      document.getElementById('response').append(e.message);
+                    }
+                  }
+                
+                  async function sign() {
+                    if(!wax.api) {
+                      return document.getElementById('response').append('* Login first *');
+                      
+                    }
+                
+                    const wallet = document.getElementById('wallet').value;
+
+                
+                    try {
+                      const result = await wax.api.transact({
+                        actions: [{
+                          account: 'freecitygamx',
+                          name: 'adduseraff',
+                          authorization: [{
+                            actor: wax.userAccount,
+                            permission: 'active',
+                          }],
+                          data: {
+                            wallet,
+                            affiliate_wallet: ref,
+                          },
+                        }]
+                      }, {
+                        blocksBehind: 3,
+                        expireSeconds: 30
+                      });
+                      
+                      document.getElementById('response').append(`${wax.userAccount}`);
+                      
+                      // document.getElementById('response').append(wax.userAccount);
+
+                      // document.createElement("<div id='myID'> my Text </div>");
+                      // document.body.insertBefore(elem,document.body.childNodes[0]);
+
+                      // document.getElementById('response').append(JSON.stringify(result));
+                      // console.log(result); 
+                      await new Promise(resolve => setTimeout(resolve, 1000));
+                      await getCurrentMessage();
+                    } catch(e) {
+                      document.getElementById('response').append('* Expired Transaction *');
+                    }
+                  }
+                
+                    async function getCurrentMessage() {
+                    const res = await wax.rpc.get_table_rows({
+                      json: true,
+                      code: 'freecitygamx',
+                      scope: 'freecitygamx',
+                      table: 'users',
+                      lower_bound: wax.userAccount,
+                      upper_bound: wax.userAccount,
+                    });
+                
+                    const message = res.rows[0] ? res.rows[0].message : `Wallet: ${wax.userAccount}`;
+                    document.getElementById('current').textContent = message;
+                    document.getElementById('current2').textContent = `${wax.userAccount}`;
+                    //document.getElementById('current3').textContent = `${wax.userAccount}`;
+
+
+                    
+
+
+                    //document.getElementById('nameinput').append(wax.userAccount);
+
+                    //document.getElementById('nameinput').textContent = wax.userAccount;
+
+                    // document.getElementById('current2').append(wax.userAccount);
+                    //document.getElementById('options').textContent = (wax.userAccount);
+                    //document.getElementById('options').textContent = (new GrowlNotification(options)).show();
+                  }
+                   // set a random value to the initial message value
+                  document.getElementById('message').value = Math.random().toString(36).substring(2);
+                
+                </script>
+        </p>
+
+                         
+
                          <div class="play button disabled">
                              <div></div>
                              <img src="img/common/spinner.gif" alt="">
@@ -122,6 +294,7 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
                             <span>cancel</span>
                          </div>
                     </article>
+
     	            <article id="credits">
         	            <h1>
          	               <span class="left-ornament"></span>
@@ -150,7 +323,7 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
                             </div>
                             <div id="franck">
                                 <div class="avatar"></div>
-                                REWaxed by
+                                ReWaxed by
                                 <a class="stroke clickable" target="_blank" href="http://waxio.io">Jordan Bourbonnais</a>
                             </div>
                         </div>
@@ -164,6 +337,7 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
 	                        <span>- click anywhere to close -</span>
                         </div>
     	            </article>
+
     	            <article id="about">
         	            <h1>
          	               <span class="left-ornament"></span>
@@ -189,7 +363,7 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
                         <div class="right">
                             <div class="img"></div>
                             <p>
-                                BrowserQuest is available on Firefox, Chrome, Safari as well as iOS devices and Firefox for Android.
+                                WaxQuest is available on Firefox, Chrome, Safari as well as iOS devices and Firefox for Android.
                             </p>
                             <span class="link">
                                 <span class="ext-link"></span>
@@ -207,7 +381,7 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
                     <article id="error">
           	           <h1>
           	               <span class="left-ornament"></span>
-          	               Your browser cannot run BrowserQuest!
+          	               Your browser cannot run WaxQuest!
           	               <span class="right-ornament"></span>
                          </h1>
                          <p>
@@ -321,6 +495,16 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
 		    <div id="credits-link" class="clickable">
 		      – <span id="toggle-credits">Credits</span>
 		    </div>
+            
+           <!-- 
+            <script>
+          document.write('<a href="https://waxaffiliation.io/?ref=');
+          document.write(ref);
+          document.write('">Affiliate Program</a>');
+          </script>
+             -->
+            
+
 		</footer>
 		
 		<ul id="page-tmpl" class="clickable" style="display:none">
@@ -355,7 +539,7 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
             if(!Modernizr.localstorage) {
                 var alert = document.createElement("div");
                     alert.className = 'alert';
-                    alertMsg = document.createTextNode("You need to enable cookies/localStorage to play BrowserQuest");
+                    alertMsg = document.createTextNode("You need to enable cookies/localStorage to play WaxQuest");
                     alert.appendChild(alertMsg);
 
                 target = document.getElementById("intro");
