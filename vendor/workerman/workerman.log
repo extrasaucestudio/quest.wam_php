@@ -1,0 +1,19 @@
+2022-06-26 21:37:35 pid:3112494 Workerman[start.php] start in DAEMON mode
+2022-06-26 21:37:35 pid:3112497 Warning: change gid or uid fail.
+2022-06-26 21:37:35 pid:3112498 Warning: change gid or uid fail.
+2022-06-26 21:37:35 pid:3112499 Warning: change gid or uid fail.
+2022-06-26 22:17:36 pid:3120054 Workerman[start.php] start in DAEMON mode
+2022-06-26 22:17:36 pid:3120054 Workerman[start.php] already running
+2022-06-26 22:18:02 pid:3120208 Workerman[start.php] start in DEBUG mode
+2022-06-26 22:18:02 pid:3120208 Workerman[start.php] already running
+2022-06-26 22:18:13 pid:3120210 Workerman[start.php] stop 
+2022-06-26 22:18:13 pid:3120210 Workerman[start.php] is stopping ...
+2022-06-26 22:18:13 pid:3112496 Workerman[start.php] stopping ...
+2022-06-26 22:18:13 pid:3112496 Workerman[start.php] has been stopped
+2022-06-26 22:18:13 pid:3120210 Workerman[start.php] stop success
+2022-06-26 22:18:17 pid:3120214 Workerman[start.php] start in DEBUG mode
+2022-06-26 22:18:17 pid:3120215 Warning: change gid or uid fail.
+2022-06-26 22:18:17 pid:3120216 Warning: change gid or uid fail.
+2022-06-26 22:18:17 pid:3120217 Warning: change gid or uid fail.
+2022-06-26 22:50:43 pid:3120214 Workerman[start.php] stopping ...
+2022-06-26 22:50:43 pid:3120214 Workerman[start.php] has been stopped
