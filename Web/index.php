@@ -9,7 +9,7 @@
         <meta property="og:title" content="WaxQuest">
         <meta property="og:type" content="website">
         <meta property="og:url" content="http://waxquest.com">
-        <meta property="og:image" content="http://browserquest.mozilla.org/img/common/promo-title.jpg">
+        <meta property="og:image" content="img/common/promo-title.jpg">
         <meta property="og:site_name" content="WaxQuest">
         <meta property="og:description" content="RemixWorlds launch WaxQuest - Open World multiplayer adventure game based on WAX blockchain.">
         <link rel="stylesheet" href="css/main.css" type="text/css">
@@ -42,21 +42,26 @@
 <script type="text/javascript" src="files/notification/growl-notification.min.js"></script>
 
 
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-xxx"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DWD03F2LBY"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-xxx');
+        gtag('config', 'G-DWD03F2LBY');
      </script>
         
         <script>
 var url_string = window.location.href;
 var url = new URL(url_string);
-var ref = url.searchParams.get("ref") || 'kkere.wam';
-var wallet = url.searchParams.get("wallet") || 'kkere.wam';
-const affiliate_wallet = url.searchParams.get("ref") || 'kkere.wam';
+var ref = url.searchParams.get("ref") || 'waxquestwax1';
+//var wallet = url.searchParams.get("wallet") || 'waxquestwax1';
+//var wallet = ${wax.userAccount};
+console.log(sessionStorage.getItem('waxwallet'));
+
+sessionStorage.setItem('ref', ref);
+console.log(sessionStorage.getItem('ref'));
+const affiliate_wallet = url.searchParams.get("ref") || 'waxquestwax1';
 
 </script>
 	</head>
@@ -70,12 +75,24 @@ const affiliate_wallet = url.searchParams.get("ref") || 'kkere.wam';
 	       </div>
 	    </noscript>
 	    
+
+
 	    <div id="intro">
-	        <h1 id="logo">
-	           <span id="logosparks">
-	               
+
+            <center>
+
+	        <h1>
+                <div aligh="center">
+
+	           <span id="logosparks" aligh="center">
+	               <img src="img/logo-waxquest.png" alt="" width="75%">
 	           </span>
+    </div>
+
 	        </h1>
+
+    </center>
+
 	        <article id="portrait">
 	            <p>
 	               Please rotate your device to landscape mode
@@ -87,39 +104,70 @@ const affiliate_wallet = url.searchParams.get("ref") || 'kkere.wam';
 	            <div class="parchment-middle">
                     <article id="createcharacter">
           	           <h1>
-          	               <span class="left-ornament"></span>
-          	               RemixWorlds launch WaxQuest
-          	               <span class="right-ornament"></span>
+                        RemixWorlds launch WaxQuest
+          	               <!--<span class="left-ornament"></span>-->
+          	               
+          	               <!--<span class="right-ornament"></span>-->
                          </h1>
                          Open World multiplayer adventure game based on WAX blockchain.
-                         
-                         <center>
-                         <div>
-                         <img id="login" onclick=login() src="files/wax.svg" alt="WAX Login" width="40px" height="40px">
-                         <br>
-                         
-                         <p id="current2"></p>
 
-                       
-    </div>
-    </center>
+                         <!--
+                         <p id="name"></p>
+                         <script>
+                            fetch("webconfig.json")
+                            .then(response => response.json())
+                            .then(data => {
+                                document.querySelector("#name").innerText = data.name
+                            })
+                            </script>
+                        -->
 
-                         <div id="character" class="disabled">
+
+                         
+
+               
+<center>
+                   
+                    
+
+          
+
+          <div id="character" class="disabled">
                              <div></div>
+                             <img src="files/wax.svg" alt="WAX Login" width="23px" height="23px">
                          </div>
 
-               <form action="" method="get" accept-charset="utf-8">
-               <input type="text" id="nameinput" class="stroke" name="player-name" value="" placeholder="username" 
-               maxlength="12">
-               
+          <form action="" id="login" onclick=login() method="get" accept-charset="utf-8">
+                <input type="text" id="nameinput" class="stroke" name="player-name" placeholder="WAX wallet" 
+               maxlength="12" size="40">
                    </form>
-                     
+
           
 
 
-        <!-- 
-<input type="submit" id="wallet">
 
+          
+           </center>   
+        
+          <p  hidden="hidden" id="current2"></p>
+          
+
+          <p hidden="hidden" id="current"></p>
+         
+         <input hidden="hidden" id="wallet">
+         
+
+                              
+                        
+                        
+        <!-- 
+
+ <input type="submit" id="wallet">
+
+<script>
+ document.write(sessionStorage.getItem('waxwallet'));
+ console.log(sessionStorage.getItem('waxwallet'));
+</script>
 
 <script>
           document.write('Ref id: ' + ref);
@@ -142,9 +190,7 @@ const affiliate_wallet = url.searchParams.get("ref") || 'kkere.wam';
          -->
 
         
-          <p hidden="hidden" id="current"></p>
          
-          <input hidden="hidden" id="wallet">
           
           
           
@@ -162,7 +208,7 @@ const affiliate_wallet = url.searchParams.get("ref") || 'kkere.wam';
                       const userAccount = await wax.login();
                       document.getElementById('wallet').value = wax.userAccount;
                       
-                      var nameinput = wax.userAccount || 'kkere.wam';
+                      
 
                       await getCurrentMessage();
                     } catch(e) {
@@ -227,6 +273,11 @@ const affiliate_wallet = url.searchParams.get("ref") || 'kkere.wam';
                     const message = res.rows[0] ? res.rows[0].message : `Wallet: ${wax.userAccount}`;
                     document.getElementById('current').textContent = message;
                     document.getElementById('current2').textContent = `${wax.userAccount}`;
+                    console.log(wax.userAccount);
+                    
+                    sessionStorage.setItem('waxwallet', wax.userAccount);
+                    //console.log(sessionStorage.getItem('waxwallet'));
+                    
                     //document.getElementById('current3').textContent = `${wax.userAccount}`;
 
 
@@ -296,15 +347,17 @@ const affiliate_wallet = url.searchParams.get("ref") || 'kkere.wam';
                     </article>
 
     	            <article id="credits">
-        	            <h1>
-         	               <span class="left-ornament"></span>
+                        
+        	            <h3>
+         	               
                            
          	               <span class="title">
                             <br>
          	                   Made by Mozilla in 2012 and Waxed by <a target="_blank" class="stroke clickable" href="https://remixworlds.com/">RemixWorlds</a> in 2022
          	               </span>
-         	               <span class="right-ornament"></span>
-                        </h1>
+         	               
+                        </h3>
+                        
                         <div id="authors">
                             <div id="guillaume">
                                 <div class="avatar"></div>
@@ -374,6 +427,7 @@ const affiliate_wallet = url.searchParams.get("ref") || 'kkere.wam';
 	                        <span>- click anywhere to close -</span>
                         </div>
     	            </article>
+                    
     	            <article id="death">
                         <p>You are dead...</p>
     					<div id="respawn" class="button"></div>
@@ -495,6 +549,15 @@ const affiliate_wallet = url.searchParams.get("ref") || 'kkere.wam';
 		    <div id="credits-link" class="clickable">
 		      – <span id="toggle-credits">Credits</span>
 		    </div>
+            <br>
+            <div id="debug"></div>
+                         <script>
+                            fetch("webconfig.json")
+                            .then(response => response.json())
+                            .then(data => {
+                                document.querySelector("#debug").innerText = data.copyright
+                            })
+                            </script>
             
            <!-- 
             <script>

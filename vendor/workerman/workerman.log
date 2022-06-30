@@ -227,3 +227,15 @@ Stack trace:
 2022-06-27 08:52:01 pid:3233002 Workerman[start.php] stop 
 2022-06-27 08:52:01 pid:3233002 Workerman[start.php] not run
 2022-06-27 08:52:05 pid:3233021 Workerman[start.php] start in DAEMON mode
+2022-06-29 18:38:14 pid:3799388 Workerman[start.php] stop 
+2022-06-29 18:38:14 pid:3799388 Workerman[start.php] is stopping ...
+2022-06-29 18:38:14 pid:3233023 Workerman[start.php] stopping ...
+2022-06-29 18:38:14 pid:3233023 Workerman[start.php] has been stopped
+2022-06-29 18:38:14 pid:3799388 Workerman[start.php] stop success
+2022-06-29 18:38:16 pid:3799413 Workerman[start.php] start in DAEMON mode
+2022-06-30 00:13:37 pid:3858415 Workerman[start.php] stop 
+2022-06-30 00:13:37 pid:3858415 Workerman[start.php] is stopping ...
+2022-06-30 00:13:37 pid:3799415 Workerman[start.php] stopping ...
+2022-06-30 00:13:37 pid:3799415 Workerman[start.php] has been stopped
+2022-06-30 00:13:37 pid:3858415 Workerman[start.php] stop success
+2022-06-30 00:13:39 pid:3858507 Workerman[start.php] start in DAEMON mode

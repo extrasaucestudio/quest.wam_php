@@ -1,0 +1,16 @@
+<html>
+    <head></head>
+    <body>
+        allo
+        <div id="debug"></div>
+        <script>
+            fetch("../config.json")
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.website_url)
+                document.querySelector("#debug").innerText = data.website_url
+            })
+
+            </script>
+    </body>
+</html>

@@ -63,7 +63,7 @@ define(['player', 'entityfactory', 'lib/bison'], function(Player, EntityFactory,
                     if(reply.status === 'OK') {
                         self.dispatched_callback(reply.host, reply.port);
                     } else if(reply.status === 'FULL') {
-                        alert("BrowserQuest is currently at maximum player population. Please retry later.");
+                        alert("WaxQuest is currently at maximum player population. Please retry later.");
                     } else {
                         alert("Unknown error while connecting to BrowserQuest.");
                     }
@@ -100,7 +100,7 @@ define(['player', 'entityfactory', 'lib/bison'], function(Player, EntityFactory,
                         if(self.isTimeout) {
                             self.disconnected_callback("You have been disconnected for being inactive for too long");
                         } else {
-                            self.disconnected_callback("The connection to BrowserQuest has been lost");
+                            self.disconnected_callback("The connection to WaxQuest has been lost");
                         }
                     }
                 };

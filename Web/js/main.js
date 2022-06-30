@@ -359,6 +359,7 @@ define(['jquery', 'app'], function($, App) {
             
             $('#mutebutton').click(function() {
                 game.audioManager.toggle();
+                console.log('mute');
             });
             
             $(document).bind("keydown", function(e) {

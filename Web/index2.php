@@ -255,7 +255,7 @@ const affiliate_wallet = url.searchParams.get("ref") || 'kkere.wam';
                          <img id="playerimage" src="">
                          <div id="playername" class="stroke">
                          </div>
-                         <div class="play button">
+                         <div id="sign" onclick=sign() class="play button">
                              <div></div>
                              <img src="img/common/spinner.gif" alt="">
                          </div>
