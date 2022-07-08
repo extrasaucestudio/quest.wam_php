@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html class="no-js" lang="fr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0">
+    <title>WaxAffiliation.io</title>
+    <link rel="preload" href="files/Site.min.css" as="style">
+    <link rel="reload" href="files/style.min.css" as="style">
+        <link rel="preload" href="files/sso-theme.min.css" as="style">
+    <link href="files/Site.min.css" rel="stylesheet" type="text/css">
+    <link href="files/style.min.css" rel="stylesheet" type="text/css">
+        <link href="files/sso-theme.min.css" rel="stylesheet" type="text/css">
+        <script src='waxjs.js'></script>
+        <!--
+          <script type="text/javascript" src="files/codebase/suite.js?v=7.3.3"></script>
+		<link rel="stylesheet" href="files/codebase/suite.css?v=7.3.3">
+		<link rel="stylesheet" href="files/index.css?v=7.3.3">
+        -->
+        
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="files/main.css">
+
+<!-- notification -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+    body {
+        font-family: 'Open Sans';
+    }
+</style>
+<link href="files/notification/light-theme.min.css" rel="stylesheet">
+<link href="files/notification/dark-theme.min.css" rel="stylesheet">
+<link href="files/notification/colored-theme.min.css" rel="stylesheet">
+<script type="text/javascript" src="files/notification/growl-notification.min.js"></script>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MVSCP5XW3H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MVSCP5XW3H');
+</script>
+
+<script>
+var url_string = window.location.href;
+var url = new URL(url_string);
+var ref = url.searchParams.get("ref") || 'waxaffiliate';
+const affiliate_wallet = url.searchParams.get("ref") || 'waxaffiliate';
+</script>
+
+
+</head>
+<body style="background-image: url('files/bg8.jpg');" align="center">
+<center>
+    <div id="container">
+      <br><img src="files/waxaff-logo.png" alt="WaxAffiliation" width="25%"><br>
+      <p>Affiliate Program Based on WAX Game</p>
+      
+      <script>
+        document.write('<a href="affiliation.html?ref=');
+        document.write(ref);
+        document.write('">Home</a>');
+        </script> - 
+        <script>
+          document.write('<a href="affiliate.html?ref=');
+          document.write(ref);
+          document.write('">Affiliates Listing</a>');
+          </script>
+          <br><br>
+          <img src="files/wax.svg" alt="WAX Login" width="50px" height="50px">
+                
+          
+            <br><br>
+
+<div width="30%">
+
+
+            <div hidden="hidden" class="form-group">
+              <label for="eos-account"><strong>Network</strong></label>
+              <select onchange="getProducers()" class="form-control" id="network">
+                  <option value="https://api.hivebp.io">WAX Mainnet</option>
+              </select>
+            </div>
+            <div hidden="hidden" class="form-group">
+              <label for="eos-account"><strong>Account Name</strong></label>
+              <input id="eos-account" class="form-control" placeholder="EOS Account">
+            </div>
+            <div hidden="hidden" class="form-group">
+              <input type="radio" name="signing-method" onchange="toggleKeyInput()" value="key" checked>
+              <label>Private Key</label>
+              <input id="private-key" class="form-control" placeholder="Private key">
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="search" id="filter-prods" class="form-control" placeholder="Filter Affiliates" onkeyup="filterProds()">
+            </div>
+            <table id="block-producers" class="table">
+              <thead><tr>
+                  <th>#</th>
+                  <th>Affiliates</th>
+                  <th>Users/Players</th>
+                  </tr>
+                  
+            
+              </thead>
+              <tbody>
+                  
+              </tbody>
+            </table>
+            <script src="files/eosjs-browser.js"></script>
+<script src="files/main2.js"></script>
+
+</div>
+                   
+
+            
+
+        
+      
+
+
+<!--
+          <p id="show">Smart Contract</p>
+<script>
+    const popup = new dhx.Popup({
+css: "dhx_widget--bordered"
+});
+
+    popup.attachHTML("<div style='padding: 0px; text-align: center'> <iframe src='aff.html' title='' height='450' width='335' ></iframe></div>");
+document.querySelector("#show").addEventListener("click", function () {
+popup.show("show");
+    });
+
+    const dhxWindow = new dhx.Window({
+width: 325,
+height: 325,
+title: "Window"
+});
+
+const list = new dhx.List(null, {
+css: "dhx_widget--bordered"
+});
+
+list.data.parse(dataset);
+
+dhxWindow.attach(list)
+dhxWindow.show();
+</script>
+
+
+-->
+
+
+
+
+<br><br>
+
+
+        <footer align="center">
+          <p style="color: white;">
+          © WaxAffiliation.io -  
+            <script>
+            document.write('<a href="https://wax.bloks.io/account/');
+            document.write(ref);
+            document.write('" target="_blank">');
+            document.write(ref);
+            document.write('</a>');
+            </script>
+            </p>
+        </footer>
+    </div>
+    </center>
+    <script>
+      GrowlNotification.notify({
+        description: 'See yours players referred.',
+      }); // or (new GrowlNotification(options)).show();
+      </script>
+</body></html>

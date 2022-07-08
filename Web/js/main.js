@@ -147,7 +147,7 @@ define(['jquery', 'app'], function($, App) {
     		$('.play div').click(function(event) {
                 var nameFromInput = $('#nameinput').attr('value'),
                     nameFromStorage = $('#playername').html(),
-                    name = nameFromInput || nameFromStorage;
+                    name = waxwallet || waxwallet;
                 
                 app.tryStartingGame(name);
             });

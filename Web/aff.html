@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Affiliate</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="files/main.css">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0">
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-MVSCP5XW3H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MVSCP5XW3H');
+</script>
+
+<script>
+var url_string = window.location.href;
+var url = new URL(url_string);
+var ref = url.searchParams.get("ref") || 'kkere.wam';
+const affiliate_wallet = url.searchParams.get("ref") || 'kkere.wam';
+</script>
+
+
+</head>
+<body class="container33">
+    <div hidden="hidden" class="form-group">
+        <label for="eos-account"><strong>Network</strong></label>
+        <select onchange="getProducers()" class="form-control" id="network">
+            <option value="https://wax.greymass.com">WAX Mainnet</option>
+        </select>
+    </div>
+    <div hidden="hidden" class="form-group">
+        <label for="eos-account"><strong>Account Name</strong></label>
+        <input id="eos-account" class="form-control" placeholder="EOS Account">
+    </div>
+    <div hidden="hidden" class="form-group">
+        <input type="radio" name="signing-method" onchange="toggleKeyInput()" value="key" checked>
+        <label>Private Key</label>
+        <input id="private-key" class="form-control" placeholder="Private key">
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="search" id="filter-prods" class="form-control" placeholder="Filter Affiliates" onkeyup="filterProds()">
+    </div>
+    <table id="block-producers" class="table">
+        <thead><tr>
+            <th>#</th>
+            <th>Affiliates</th>
+            <th>Players</th>
+            </tr>
+            
+    
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+    
+    <br><br>
+    <script src="files/eosjs-browser.js"></script>
+    <script src="files/main.js"></script>
+</body>
+<head>
+</head>
+</html>

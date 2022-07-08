@@ -205,7 +205,7 @@ footer, header, hgroup, menu, nav, section {
     
     #parchment p {font-family:'GraphicPixel';}
     
-    #credits, #death, #about {top:50%;}
+    #credits, #death, #about, {top:50%;}
     .intro #credits, .intro #about {top:55%;}
     #credits h1 a {color:#fcda5c;text-decoration:none;}
     #authors div a {display:block;color:#fff;text-decoration:none;}

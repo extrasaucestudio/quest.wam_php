@@ -15,6 +15,9 @@
         <link rel="stylesheet" href="css/main.css" type="text/css">
         <link rel="stylesheet" href="css/achievements.css" type="text/css">
         <script src="js/lib/modernizr.js" type="text/javascript"></script>
+        <script type="text/javascript" src="files/codebase/suite.js"></script>
+		<link rel="stylesheet" href="files/codebase/suite.css">
+		<link rel="stylesheet" href="files/index.css">
         <!--[if lt IE 9]>
                 <link rel="stylesheet" href="css/ie.css" type="text/css">
                 <script src="js/lib/css3-mediaqueries.js" type="text/javascript"></script>
@@ -23,9 +26,14 @@
                 </script>
         <![endif]-->
         <script src="js/detect.js" type="text/javascript"></script>
-        <title>WaxQuest</title>
+        <title>WaxQuest - Play</title>
         <script src='waxjs.js'></script>
-
+        <script src='files/menu.js'></script>
+        
+        <!--
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="files/main.css">
+-->
 
 <!-- notification -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600" rel="stylesheet">
@@ -41,6 +49,11 @@
 <link href="files/notification/colored-theme.min.css" rel="stylesheet">
 <script type="text/javascript" src="files/notification/growl-notification.min.js"></script>
 
+<link rel='stylesheet' type='text/css' href='files/pages/css/style.css' />
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+    <script type='text/javascript' src='files/pages/js/jquery.ba-hashchange.min.js'></script>
+    <script type='text/javascript' src='files/pages/js/dynamicpage.js'></script>
+
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-DWD03F2LBY"></script>
         <script>
@@ -52,16 +65,21 @@
      </script>
         
         <script>
-var url_string = window.location.href;
-var url = new URL(url_string);
-var ref = url.searchParams.get("ref") || 'waxquestwax1';
+//var url_string = window.location.href;
+//var url = new URL(url_string);
+//var ref = url.searchParams.get("ref") || 'waxquestwax1';
 //var wallet = url.searchParams.get("wallet") || 'waxquestwax1';
 //var wallet = ${wax.userAccount};
 console.log(sessionStorage.getItem('waxwallet'));
-console.log(sessionStorage.getItem('affiliatewallet'));
-//const affiliate_wallet = url.searchParams.get("ref") || 'waxquestwax1';
-const affiliate_wallet = sessionStorage.getItem('affiliatewallet');
+const waxwallet = sessionStorage.getItem('waxwallet');
 
+console.log(sessionStorage.getItem('affiliatewallet'));
+const affiliatewallet = sessionStorage.getItem('affiliatewallet');
+
+//const affiliate_wallet = url.searchParams.get("ref") || 'waxquestwax1';
+//const charactername = url.searchParams.get("ref") || 'waxquestwax1';
+
+//console.log(charactername):
 
 </script>
 	</head>
@@ -83,9 +101,9 @@ const affiliate_wallet = sessionStorage.getItem('affiliatewallet');
 
 	        <h1>
                 <div aligh="center">
-<img src="img/logo-waxquest.png" alt="" width="100%">
+
 	           <span id="logosparks" aligh="center">
-	               
+	               <img src="img/logo-waxquest.png" alt="" width="75%">
 	           </span>
     </div>
 
@@ -104,45 +122,64 @@ const affiliate_wallet = sessionStorage.getItem('affiliatewallet');
 	            <div class="parchment-middle">
                     <article id="createcharacter">
           	           <h1>
-                        WaxQuest - Play To Earn by <a class="stroke clickable" href="https://remixworlds.com" target="_blank">RemixWorlds</a>
-          	               <!--<span class="left-ornament"></span>-->
-          	               
-          	               <!--<span class="right-ornament"></span>-->
+                        
+          	               <span class="left-ornament"></span>
+          	               WaxQuest
+          	               <span class="right-ornament"></span>
                          </h1>
-                         Open World multiplayer adventure game based on WAX blockchain.
-                         <br>
-                                                                          
+                         Welcome!
 
-                         <!--
-                         <p id="name"></p>
-                         <script>
-                            fetch("webconfig.json")
-                            .then(response => response.json())
-                            .then(data => {
-                                document.querySelector("#name").innerText = data.name
-                            })
-                            </script>
-                        -->
+                         
                
 <center>
                    <div>
                     
                     <table>
-                    <tr><br>
-                        <th><img id="login" onclick=login() src="files/wax.svg" alt="WAX Login" width="100px" height="100px">&nbsp;</th>
-                        <th id="current2">WaxLogin</th>
+                    <tr>
+                        <th>Wallet:&nbsp;</th>
+                        <th>&nbsp;&nbsp;</th>
+                        <th><script>document.write(waxwallet);</script></th>
+                    </tr>
+                    <tr>
+                        <th>Referer Wallet:&nbsp;</th>
+                        <th>&nbsp;&nbsp;</th>
+                        <th><script>document.write(affiliatewallet);</script></th>
                     </tr>
                   </table>
-                  <br>
-                  <div class="clickable" id="current3"></div>
-                  <strong><div class="clickable" id="sign" onclick=sign() alt="Subscribe & Play">Subscribe & Play</div></strong>
                     </div>
-                    <h1 id="response"></h1>
-</center>   
+                    
+                  
+                </center>   
+                  
 
-         <p hidden="hidden" id="current"></p>
+
+          <div id="character" class="disabled">
+                             <div></div>
+                         </div>
+
+          <form action="" method="get" accept-charset="utf-8">
+                <input type="text" id="nameinput" class="stroke" name="player-name" placeholder="Choose Character Name" 
+               maxlength="12" size="40">
+                   </form>
+
+          
+
+
+
+          
+           
+        
+          
+          
+
+          <p hidden="hidden" id="current"></p>
+         
          <input hidden="hidden" id="wallet">
-                 
+         
+
+                              
+                        
+                        
         <!-- 
 
  <input type="submit" id="wallet">
@@ -169,6 +206,17 @@ const affiliate_wallet = sessionStorage.getItem('affiliatewallet');
           document.write(ref);
           document.write('">Affiliates Listing</a>');
           </script>
+
+        
+                         <p id="name"></p>
+                         <script>
+                            fetch("webconfig.json")
+                            .then(response => response.json())
+                            .then(data => {
+                                document.querySelector("#name").innerText = data.name
+                            })
+                            </script>
+                        
        
          -->
 
@@ -177,7 +225,7 @@ const affiliate_wallet = sessionStorage.getItem('affiliatewallet');
           
           
           
-          
+          <p id="response"></p>
         
         
                 <p>
@@ -191,13 +239,7 @@ const affiliate_wallet = sessionStorage.getItem('affiliatewallet');
                       const userAccount = await wax.login();
                       document.getElementById('wallet').value = wax.userAccount;
                       
-                    GrowlNotification.notify({
-                    title: 'Well Done!',
-                    description: `Wallet: ${wax.userAccount}`,
-                    type: 'error',
-                    position: 'top-center',
-                    closeTimeout: 0
-                    });
+                      
 
                       await getCurrentMessage();
                     } catch(e) {
@@ -225,7 +267,7 @@ const affiliate_wallet = sessionStorage.getItem('affiliatewallet');
                           }],
                           data: {
                             wallet,
-                            affiliate_wallet,
+                            affiliate_wallet: ref,
                           },
                         }]
                       }, {
@@ -233,8 +275,8 @@ const affiliate_wallet = sessionStorage.getItem('affiliatewallet');
                         expireSeconds: 30
                       });
                       
-                      document.getElementById('response').append(`Thank You ${wax.userAccount}`);
-                      window.location.replace("/play.php");
+                      document.getElementById('response').append(`${wax.userAccount}`);
+                      
                       // document.getElementById('response').append(wax.userAccount);
 
                       // document.createElement("<div id='myID'> my Text </div>");
@@ -262,18 +304,17 @@ const affiliate_wallet = sessionStorage.getItem('affiliatewallet');
                     const message = res.rows[0] ? res.rows[0].message : `Wallet: ${wax.userAccount}`;
                     document.getElementById('current').textContent = message;
                     document.getElementById('current2').textContent = `${wax.userAccount}`;
-                    document.getElementById('current3').textContent = `Now you are ready to `;
+                    console.log(wax.userAccount);
+                    
                     sessionStorage.setItem('waxwallet', wax.userAccount);
-                    console.log(sessionStorage.getItem('waxwallet'));
-                    sessionStorage.setItem('affiliatewallet', ref);
-                    console.log(sessionStorage.getItem('affiliatewallet'));
-                    
-                    
-                                     
                     //console.log(sessionStorage.getItem('waxwallet'));
                     
                     //document.getElementById('current3').textContent = `${wax.userAccount}`;
-                
+
+
+                    
+
+
                     //document.getElementById('nameinput').append(wax.userAccount);
 
                     //document.getElementById('nameinput').textContent = wax.userAccount;
@@ -290,7 +331,7 @@ const affiliate_wallet = sessionStorage.getItem('affiliatewallet');
 
                          
 
-                         <div hidden="hidden" class="play button disabled">
+                         <div class="play button disabled">
                              <div></div>
                              <img src="img/common/spinner.gif" alt="">
                          </div>
@@ -310,9 +351,24 @@ const affiliate_wallet = sessionStorage.getItem('affiliatewallet');
                             <div class="bottom"></div>
                          </div>
                          <img id="playerimage" src="">
-                         <div id="playername" class="stroke">
-                        
-                         </div>
+<center>
+                         <table>
+                         <tr>
+                            
+                         <th>WAX Wallet:&nbsp;<script>
+                         document.write(sessionStorage.getItem('waxwallet'));
+                           </script>&nbsp;</th>
+                           <th>/ Name:&nbsp;</th>
+                         <th><div id="playername" class="stroke">
+                         </div></th>
+                           
+                            </tr>
+                            
+                         </table>
+                </center>
+                         
+                         
+                            
                          <div class="play button">
                              <div></div>
                              <img src="img/common/spinner.gif" alt="">
@@ -382,20 +438,151 @@ const affiliate_wallet = sessionStorage.getItem('affiliatewallet');
                         </div>
     	            </article>
 
-    	            <article id="about">
-        	            <h1>
-         	               <span class="left-ornament"></span>
-         	               <span class="title">
-         	                   What is WaxQuest?
-         	               </span>
-         	               <span class="right-ornament"></span>
-                        </h1>
-                        <p id="game-desc">
-                        WaxQuest is a multiplayer game inviting you to explore a
-                            world of adventure from your Web browser.
-                        </p>
+<article id="about">
+       <center>
+        
+        
+		  		
+
+		<table>
+            <tr>
+                 
+                <th>
+            <nav>
+		      <ul>
+		          <li><a href="play.php">About</a></li>
+				  <li><a href="files/pages/profile.html">Profile</a></li>
+		          <li><a href="files/pages/activity.html">Activity</a></li>
+                  <li><a href="files/pages/trading.html">Trading</a></li>
+                  <li><a href="files/pages/buy.html">Buy</a></li>
+		      </ul>
+		  </nav>
+                
+                </th>
+               <th><h3>Wallet: <script>
+				document.write(sessionStorage.getItem('waxwallet'));
+				  </script></h3></th>
+            </tr>
+            <tr></tr>
+        </table>  
+        
+                </center>
+		<section id="main-content">
+		<div id="guts">
+        <iframe src="files/pages/iframe-play.html" height="250px" width="700px"></iframe>
+        
+		</div>
+
+        
+        <button class="dhx_sample-btn dhx_sample-btn--flat" onclick="show2()">show</button>
+       
+		</section>
+
+                
+        <div hidden="hidden" class="clickable" onclick="dhxwindow.show()">show</div>
+        <script>
+			const windowHtml = '<p>Wallet: <a target="_blank" href="https://wax.atomichub.io/profile/' + waxwallet + '">' + waxwallet + '</a><br></p><p>Inspect</p><img style="display: block; width: 50px; height: 50px; margin-top: 20px; margin-left: auto; margin-right: auto" src="files/wax.svg">';
+			
+            const dhxwindow = new dhx.Window({
+				width: 375,
+				height: 300,
+				closable: false,
+				movable: true,
+				modal: false,
+				title: 'Wax Dashboard - Wallet: ' + waxwallet,
+				html: windowHtml
+			});
+
+			dhxwindow.show();
+		</script>
+        
+        <div id="menu"> 
+             <script type="text/javascript"> 
+                 menu(); 
+             </script> 
+         </div> 
+		
+	
+	<script>
+		function show2() {
+			dhx.alert({
+				header: "DHTMLX Alert Box",
+				text: "With the help of DHTMLX components you are able to create versatile user interfaces for web apps of any kind. Modern technologies and design make our library a great tool for developers working on the most complex projects. And here dhtmlxMessage represents a small but indispensable toolkit of helpers for initializing all types of messages: notifications, alert and confirmation boxes, and tooltips. Try out the abilities of dhtmlxMessage in our interactive demos and samples.",
+				buttonsAlignment: "center",
+				buttons: ["ok"],
+			});
+		}
+	</script>
+		
+		
+
+
+     <!--  
+<center>
+                         <table>
+                         <tr>
+                            
+                         <th>WAX Wallet:&nbsp;<script>
+                         document.write(sessionStorage.getItem('waxwallet'));
+                           </script>&nbsp;</th>
+                           <th>/ Name:&nbsp;</th>
+                         <th><div id="playername" class="stroke"></div></th>
+                           
+                            </tr>
+                            
+                         </table>
+                </center>
+
+
+                        
+
+                
+
+
+
+
+                    <div width="10%" class="container33">
+            <div hidden="hidden" class="form-group">
+              <label for="eos-account"><strong>Network</strong></label>
+              <select onchange="getProducers()" class="form-control" id="network">
+                  <option value="https://api.hivebp.io">WAX Mainnet</option>
+              </select>
+            </div>
+            <div hidden="hidden" class="form-group">
+              <label for="eos-account"><strong>Account Name</strong></label>
+              <input id="eos-account" class="form-control" placeholder="EOS Account">
+            </div>
+            <div hidden="hidden" class="form-group">
+              <input type="radio" name="signing-method" onchange="toggleKeyInput()" value="key" checked>
+              <label>Private Key</label>
+              <input id="private-key" class="form-control" placeholder="Private key">
+              </div>
+            </div>
+            <div hidden="hidden" class="form-group">
+              <input type="search" id="filter-prods" class="form-control" placeholder="Filter Affiliates" onkeyup="filterProds()">
+            </div>
+            <table id="block-producers" class="table">
+              <thead><tr>
+                  <th>#</th>
+                  <th>Affiliates</th>
+                  <th>Users/Players</th>
+                  </tr>
+                  
+            
+              </thead>
+              <tbody>
+                  
+              </tbody>
+            </table>
+            <script src="files/eosjs-browser.js"></script>
+<script src="files/main2.js"></script>
+
+</div>
+                -->
+                <!--
                         <div class="left">
-                            <div class="img"></div>
+                            <img id="login" onclick=login() src="files/wax.svg" alt="WAX Login" width="100px" height="100px">
+                            
                             <p>
                                 This demo is powered by HTML5 and WebSockets, which allow for real-time gaming and apps on the Web.
                             </p>
@@ -411,17 +598,20 @@ const affiliate_wallet = sessionStorage.getItem('affiliatewallet');
                             </p>
                             <span class="link">
                                 <span class="ext-link"></span>
-                                <a target="_blank" class="clickable" href="http://github.com/extrasaucestudio">Grab the source</a> on Github
+                                <a target="_blank" class="clickable" href="http://github.com/mozilla/BrowserQuest">Grab the source</a> on Github
                             </span>
                         </div>
+ -->
 	                    <div id="close-about">
 	                        <span>- click anywhere to close -</span>
                         </div>
+               
     	            </article>
+
+                    
                     
     	            <article id="death">
                         <p>You are dead...</p>
-
     					<div id="respawn" class="button"></div>
     	            </article>
                     <article id="error">
@@ -443,17 +633,20 @@ const affiliate_wallet = sessionStorage.getItem('affiliatewallet');
 		    <div id="canvasborder">
 		        <article id="instructions" class="clickable">
 		            <div class="close"></div>
-		            <h1>
+		            <h2>
+                        <br>
      	               <span class="left-ornament"></span>
-     	               How to play                       
+     	               How to play
      	               <span class="right-ornament"></span>
-	                </h1>
+	                </h2>
+
 	                <ul>
 	                   <li><span class="icon"></span>Left click or tap to move, attack and pick up items.</li>
 	                   <li><span class="icon"></span>Press ENTER to chat.</li>
 	                   <li><span class="icon"></span>Your character is automatically saved as you play.</li>
-                       <li><span class="icon"></span>Your character is automatically saved as you play.</li>
 	                </ul>
+
+
 	                    <p>- click anywhere to close -</p>
 		        </article>
 		        <article id="achievements" class="page1 clickable">
@@ -529,7 +722,9 @@ const affiliate_wallet = sessionStorage.getItem('affiliatewallet');
                 </div>
 		    </div>
 		</div>
+        <center>
 		<footer>
+            
 		    <div id="sharing" class="clickable">
 		      Share this on 
               <!--  
@@ -542,6 +737,7 @@ const affiliate_wallet = sessionStorage.getItem('affiliatewallet');
 		    <div id="credits-link" class="clickable">
 		      – <span id="toggle-credits">Credits</span>
 		    </div>
+             <!-- 
             <br>
             <div id="debug"></div>
                          <script>
@@ -552,7 +748,7 @@ const affiliate_wallet = sessionStorage.getItem('affiliatewallet');
                             })
                             </script>
             
-           <!-- 
+          
             <script>
           document.write('<a href="https://waxaffiliation.io/?ref=');
           document.write(ref);
@@ -560,9 +756,9 @@ const affiliate_wallet = sessionStorage.getItem('affiliatewallet');
           </script>
              -->
             
-
+                       
 		</footer>
-		
+		 </center>
 		<ul id="page-tmpl" class="clickable" style="display:none">
         </ul>
         <ul>

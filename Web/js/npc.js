@@ -19,8 +19,9 @@ define(['character'], function(Character) {
             "Like a boss",
             "I do nothing all day",
             "Like a boss",
-            "Now leave me alone",
-            "Like a boss"
+            "You want be like me ?",
+            'Refer a lot WAX users on WaxQuest and earn a lot. See our <a target="_blank" href="https://www.waxaffiliation.io/">affiliate program</a>'
+       
         ],
     
         "villagegirl": [

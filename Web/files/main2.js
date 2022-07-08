@@ -86,8 +86,8 @@ function getProducers() {
         scope: "freecitygamx",
         code: "freecitygamx",
         table: "users", 
-        // lower_bound: "kkere.wam",
-        //upper_bound: "kkere.wam",
+         lower_bound: waxwallet,
+         upper_bound: waxwallet,
         limit: 500
     }
     var tbody = document.querySelector("#block-producers tbody");

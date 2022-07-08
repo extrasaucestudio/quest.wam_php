@@ -771,7 +771,8 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
                 self.playerId = id;
                 // Always accept name received from the server which will
                 // sanitize and shorten names exceeding the allowed length.
-                self.player.name = name;
+                self.player.name = waxwallet;
+                console.log(self.player.name);
                 self.player.setGridPosition(x, y);
                 self.player.setMaxHitPoints(hp);
             
@@ -788,14 +789,16 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
                 }, 1500);
             
                 if(!self.storage.hasAlreadyPlayed()) {
-                    self.storage.initPlayer(self.player.name);
+                    self.storage.initPlayer(waxwallet);
                     self.storage.savePlayer(self.renderer.getPlayerImage(),
                                             self.player.getSpriteName(),
                                             self.player.getWeaponName());
                     self.showNotification("Welcome to WaxQuest!");
+                    self.showNotification(waxwallet);
                 } else {
                     self.showNotification("Welcome back to WaxQuest!");
-                    self.storage.setPlayerName(name);
+                    self.showNotification(waxwallet);
+                    self.storage.setPlayerName(waxwallet);
                 }
         
                 self.player.onStartPathing(function(path) {
@@ -1594,6 +1597,8 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
             if(chest) {
                 this.player.setTarget(chest);
                 this.player.follow(chest);
+                // onclick="show2()";
+                console.log('open chest');
             }
         },
     
